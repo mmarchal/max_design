@@ -1,7 +1,7 @@
 # This is a generated file; do not edit or check into version control.
-path_provider=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-2.0.11\\
-path_provider_android=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_android-2.0.20\\
-path_provider_ios=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_ios-2.0.11\\
-path_provider_linux=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-2.1.7\\
-path_provider_macos=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-2.0.6\\
-path_provider_windows=D:\\Flutter\\flutter_windows_2.10.5-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_windows-2.1.3\\
+path_provider=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11/
+path_provider_android=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.20/
+path_provider_ios=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/
+path_provider_linux=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/
+path_provider_macos=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.6/
+path_provider_windows=/Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.1.3/
