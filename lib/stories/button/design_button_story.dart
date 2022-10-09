@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:max_design/stories/icon_options.dart';
+import 'package:max_design/stories/options/icon_options.dart';
 import 'package:max_design/widgets/button/design_button.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 

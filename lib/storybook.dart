@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:max_design/stories/button/design_button_story.dart';
+import 'package:max_design/stories/card/design_card_story.dart';
+import 'package:max_design/stories/input/design_text_field_story.dart';
 import 'package:max_design/stories/text/design_text_story.dart';
 import 'package:max_design/widgets/app_loader.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
@@ -23,6 +25,18 @@ class StorybookMain extends StatelessWidget {
             name: 'Widgets/Button',
             description: 'Design button widget',
             builder: (context) => designButtonStory(
+              context.knobs,
+            ),
+          ),
+          Story(
+            name: 'Widgets/Card',
+            builder: (context) => designCardStory(
+              context.knobs,
+            ),
+          ),
+          Story(
+            name: 'Widgets/TextFormField',
+            builder: (context) => designTextFieldStory(
               context.knobs,
             ),
           ),
