@@ -26,18 +26,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "charts_common",
-      "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/charts_common-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "charts_flutter",
-      "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/charts_flutter-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "clock",
       "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
@@ -144,12 +132,6 @@
       "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
-    },
-    {
-      "name": "logging",
-      "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "matcher",
@@ -290,6 +272,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "syncfusion_flutter_charts",
+      "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_charts-20.3.48",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.3.48",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/maxime/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0",
       "packageUri": "lib/",
@@ -332,7 +326,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-10-09T15:53:36.712864Z",
+  "generated": "2022-10-09T21:27:20.681547Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }

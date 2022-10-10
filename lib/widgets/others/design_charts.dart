@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:max_design/objects/charts_data.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 enum ChartType { bar, line, pie }
 
+const String title = 'Statistiques';
+
 class DesignCharts extends StatelessWidget {
-  final List<Map> datas;
+  final List<ChartData> datas;
   final bool animate;
   final ChartType chartType;
 
@@ -28,78 +32,55 @@ class DesignCharts extends StatelessWidget {
   }
 
   Widget _buildBarChart() {
-    //Parse the data list to List<Series<dynamic, String>> type
-    List<charts.Series<dynamic, String>> series = [
-      charts.Series(
-        id: "Sales",
-        data: datas,
-        domainFn: (dynamic sales, _) => sales["year"],
-        measureFn: (dynamic sales, _) => sales["sales"],
-        colorFn: (dynamic sales, _) => sales["color"],
-      )
-    ];
-
-    return charts.BarChart(
-      series,
-      animate: animate,
-      barGroupingType: charts.BarGroupingType.grouped,
-      behaviors: [
-        charts.SeriesLegend(),
-      ],
+    return Expanded(
+      child: SfSparkBarChart(
+        // Initialize category axis
+        plotBand: const SparkChartPlotBand(
+          start: 0,
+          end: 2,
+          color: Colors.red,
+        ),
+        data: datas
+            .map(
+              (e) => num.parse(
+                e.y.toString(),
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 
   Widget _buildLineChart() {
     //Parse the series list to List<Series<dynamic, nul>> type
-    List<charts.Series<dynamic, num>> series = [
-      charts.Series(
-        id: "Sales",
-        data: datas,
-        domainFn: (dynamic sales, _) => datas.indexOf(sales),
-        measureFn: (dynamic sales, _) => sales["sales"],
-        colorFn: (dynamic sales, _) => sales["color"],
-      )
-    ];
     return Expanded(
-      child: charts.LineChart(
-        series,
-        domainAxis: const charts.NumericAxisSpec(
-          tickProviderSpec: charts.BasicNumericTickProviderSpec(
-            zeroBound: false,
-          ),
-          viewport: charts.NumericExtents(
-            2016.0,
-            2022.0,
-          ),
-        ),
-        animate: true,
+      child: SfCartesianChart(
+        title: ChartTitle(text: title),
+        // Initialize category axis
+        primaryXAxis: CategoryAxis(),
+        series: <ChartSeries>[
+          // Initialize line series
+          LineSeries<ChartData, String>(
+            dataSource: datas,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+          )
+        ],
       ),
     );
   }
 
   Widget _buildPieChart() {
-    //Parse the series list to List<Series<dynamic, String>> type
-    List<charts.Series<dynamic, String>> series = [
-      charts.Series(
-        id: "Sales",
-        data: datas,
-        domainFn: (dynamic sales, _) => sales["year"],
-        measureFn: (dynamic sales, _) => sales["sales"],
-        colorFn: (dynamic sales, _) => sales["color"],
-      )
-    ];
-
-    return charts.PieChart(
-      series,
-      animate: animate,
-      defaultRenderer: charts.ArcRendererConfig(
-        arcWidth: 100,
-        arcRendererDecorators: [
-          charts.ArcLabelDecorator(
-            labelPosition: charts.ArcLabelPosition.inside,
-          ),
-        ],
-      ),
+    return SfCircularChart(
+      title: ChartTitle(text: title),
+      series: <CircularSeries>[
+        // Initialize pie series
+        PieSeries<ChartData, String>(
+          dataSource: datas,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+        )
+      ],
     );
   }
 }
