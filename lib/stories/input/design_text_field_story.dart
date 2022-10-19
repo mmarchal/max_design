@@ -4,6 +4,7 @@ import 'package:max_design/widgets/input/design_text_field.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 Widget designTextFieldStory(KnobsBuilder knobsBuilder) => DesignTextField(
+      controller: TextEditingController(),
       onChanged: (value) => debugPrint(value),
       onSubmitted: (value) => debugPrint(value),
       labelText: knobsBuilder.text(
