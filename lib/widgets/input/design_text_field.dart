@@ -6,6 +6,7 @@ typedef VoidOnChanged = void Function(String value);
 typedef VoidOnSubmitted = void Function(String value);
 
 class DesignTextField extends StatelessWidget {
+  final TextEditingController controller;
   final VoidOnChanged? onChanged;
   final VoidOnSubmitted? onSubmitted;
   final String? hintText;
@@ -17,6 +18,7 @@ class DesignTextField extends StatelessWidget {
 
   const DesignTextField({
     Key? key,
+    required this.controller,
     this.onChanged,
     this.onSubmitted,
     this.hintText,
@@ -32,6 +34,7 @@ class DesignTextField extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         width: widthContainer ?? 200,
         child: TextFormField(
+          controller: controller,
           maxLines: 1,
           decoration: InputDecoration(
             border: OutlineInputBorder(
