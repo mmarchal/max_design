@@ -1,3 +1,9 @@
+# 0.1.1
+
+_Fix_
+
+- Add legend and value to the chart
+
 # 0.1.0
 
 _Feat_

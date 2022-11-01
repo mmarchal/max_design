@@ -55,12 +55,14 @@ class DesignCharts extends StatelessWidget {
     //Parse the series list to List<Series<dynamic, nul>> type
     return Expanded(
       child: SfCartesianChart(
+        legend: Legend(isVisible: true),
         title: ChartTitle(text: title),
         // Initialize category axis
         primaryXAxis: CategoryAxis(),
         series: <ChartSeries>[
           // Initialize line series
           LineSeries<ChartData, String>(
+            dataLabelSettings: const DataLabelSettings(isVisible: true),
             dataSource: datas,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
@@ -73,9 +75,11 @@ class DesignCharts extends StatelessWidget {
   Widget _buildPieChart() {
     return SfCircularChart(
       title: ChartTitle(text: title),
+      legend: Legend(isVisible: true),
       series: <CircularSeries>[
         // Initialize pie series
         PieSeries<ChartData, String>(
+          dataLabelSettings: const DataLabelSettings(isVisible: true),
           dataSource: datas,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
