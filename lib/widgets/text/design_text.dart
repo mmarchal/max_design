@@ -8,6 +8,7 @@ class DesignText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final FontStyle? fontStyle;
+  final Color? color;
 
   const DesignText({
     Key? key,
@@ -17,6 +18,7 @@ class DesignText extends StatelessWidget {
     this.fontSize = 14,
     this.fontWeight,
     this.fontStyle,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -29,6 +31,7 @@ class DesignText extends StatelessWidget {
             fontSize: fontSize,
             fontStyle: fontStyle,
             fontWeight: fontWeight,
+            color: color,
           ),
     );
   }

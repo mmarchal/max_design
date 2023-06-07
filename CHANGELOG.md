@@ -1,3 +1,9 @@
+# 0.2.1
+
+_Fix_
+
+- Add color nullable parameter on design text
+
 # 0.2.0
 
 _Upgrade_
