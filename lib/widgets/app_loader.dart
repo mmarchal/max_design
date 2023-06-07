@@ -20,7 +20,7 @@ OverlayEntry? loaderOverlay;
 void showLoaderOverlay(BuildContext context) {
   if (loaderOverlay == null) {
     loaderOverlay = createOverlayEntryLoader(context);
-    Overlay.of(context)?.insert(loaderOverlay!);
+    Overlay.of(context).insert(loaderOverlay!);
   }
 }
 

@@ -1,3 +1,9 @@
+# 0.2.0
+
+_Upgrade_
+
+- Upgrade dependencies (google_fonts, storybook_flutter and syncfusion_flutter_charts)
+
 # 0.1.1
 
 _Fix_
