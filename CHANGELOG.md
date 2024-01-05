@@ -1,3 +1,9 @@
+# 0.3.0
+
+_Feat_
+
+- Update major versions of dependencies
+
 # 0.2.1
 
 _Fix_
